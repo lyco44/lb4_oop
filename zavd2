@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int n, a;
+    cin >> n;
+    double masiv[n];
+    double* ptr = masiv;
+    
+
+    
+    for (int i = 0; i < n; i++){
+        cin >> *(ptr + i);
+    }
+    
+    double max;
+    
+    for (int j = 1; j < n; j++){
+        if(max < *(ptr + j)) {
+            max = *(ptr + j);
+        }
+        if(*(ptr + j) == 0){
+            a++;
+        }
+        
+    }
+    
+    cout << a + max;    
+}
